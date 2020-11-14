@@ -9,7 +9,7 @@ function App() {
 const Home = () => {
   return <h1>La home de mi pagina</h1>;
 }
-  
+
 const prueba = process.env.REACT_APP_URL;
 
   return (
