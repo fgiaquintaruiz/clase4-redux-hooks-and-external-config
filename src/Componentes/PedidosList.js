@@ -11,7 +11,9 @@ class PedidosList extends Component {
 
     componentDidMount() {
         //TODO modificar para levantar por config externalizada
-        axios.get("http://localhost:3001/pedidos").then((resp) => {
+        const url = process.env.REACT_APP_URL;
+        // console.log(url);
+        axios.get( url + "pedidos").then((resp) => {
             this.setState({ pedidos: resp.data })
         })
     }
@@ -30,7 +32,7 @@ class PedidosList extends Component {
             <tbody>
                 {
                     pedidos.map((item) => (
-                        <tr>
+                        <tr key={item.id} >
                             <td>{item.destinatario}</td>
                             <td>{item.pedido}</td>
                             <td>{item.fecha}</td>
@@ -39,8 +41,6 @@ class PedidosList extends Component {
                     ))
                 }
             </tbody>
-
-
         </table>);
     }
 }

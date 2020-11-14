@@ -9,7 +9,7 @@ class PedidoAdd extends Component {
     }
 
     handleSubmit(){
-        Axios.post("http://localhost:3001/pedidos", this.state).then((resp) => {
+        Axios.post(process.env.REACT_APP_URL + "pedidos", this.state).then((resp) => {
 
         
             //TODO reemplazar por react router redirect
