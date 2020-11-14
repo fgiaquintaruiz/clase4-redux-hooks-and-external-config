@@ -11,21 +11,6 @@ const Home = () => {
 }
 const prueba = process.env.REACT_APP_URL;
 
-// prueba + 'config.properties'
-
-// const reader = new FileReader();
-//     reader.onload = async (e) => { 
-//       const text = (e.target.result)
-//       console.log(text)
-//       alert(text)
-//     };
-    
-//     reader.readAsText(prueba + 'config.properties');
-//     console.log(reader);
-
-    // const file = require(prueba + 'config.properties');
-    // console.log(file);
-
   return (
     
     <BrowserRouter>
